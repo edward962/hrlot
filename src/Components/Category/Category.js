@@ -1,10 +1,10 @@
 import React, {  useEffect } from 'react';
-import useFetch from "./useFetch";
-import './App.css';
+import useFetch from "../../services/useFetch";
+import Offer from "../Offer/Offer";
 
 
-function Offer() {
- const url = "offers/list/pl";
+function Category() {
+ const url = "categories/pl";
  const res = useFetch(process.env.REACT_APP_API_URL + url, {
   method: 'GET',
   headers: {
@@ -18,9 +18,9 @@ function Offer() {
 console.log(res);
   return (
     <div>
-    {/* <span>{ourData}</span> */}
+    
   </div>
   );
 }
 
-export default Offer;
+export default Category;
