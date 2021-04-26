@@ -5,10 +5,10 @@ import './App.css';
 function App() {
   useEffect( () => {
       console.log(process.env.REACT_APP_API_KEY,process.env.REACT_APP_API_URL);
-      fetch('https://api.lot.com/hr/v3/offers/list/pl', {
+      fetch(process.env.REACT_APP_API_URL+'offers/list/en', {
       method: 'get',
       headers: {
-          'X-Api-Key': 'zEiAS4E5pE3mFnaqIKn3s6kCxsgqHCKH9VB97I0f',
+          'X-Api-Key': process.env.REACT_APP_API_KEY,
           'Content-Type': 'application/json'
       }
   })
