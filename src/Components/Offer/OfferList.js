@@ -11,6 +11,9 @@ function OfferList() {
       'X-Api-Key': process.env.REACT_APP_API_KEY,
       'Content-Type': 'application/json'
   }});
+  if (res.error) {
+    return <div>Something gone wrong!</div>
+  }
  if (!res.response) {
    return <div>Loading...</div>
  }

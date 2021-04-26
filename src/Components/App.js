@@ -1,8 +1,8 @@
 import React, {  useEffect } from 'react';
 import useFetch from "../services/useFetch";
 import './App.css';
-import Category from './Category/Category';
 import CategoryList from "./Category/CategoryList";
+
 
 
 
@@ -14,9 +14,13 @@ function App() {
       'X-Api-Key': process.env.REACT_APP_API_KEY,
       'Content-Type': 'application/json'
   }});
+  if (res.error) {
+    return <div>Something gone wrong!</div>
+  }
  if (!res.response) {
    return <div>Loading...</div>
  }
+
 //  const ourData = res.json();
 console.log(res.response);
   return (
