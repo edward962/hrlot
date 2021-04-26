@@ -1,11 +1,10 @@
 import React, {  useEffect } from 'react';
 import useFetch from "./useFetch";
 import './App.css';
-import Category from "./Category";
 
 
-function App() {
- const url = "categories/pl";
+function Offer() {
+ const url = "offers/list/pl";
  const res = useFetch(process.env.REACT_APP_API_URL + url, {
   method: 'GET',
   headers: {
@@ -24,4 +23,4 @@ console.log(res);
   );
 }
 
-export default App;
+export default Offer;
