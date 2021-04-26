@@ -19,19 +19,19 @@ function CategoryList(props) {
     <div>
     <ul>
         {props.items.map(item => (
-        <li key={item.key}>
-        <Link to={`/category/${item.key}`}>{props.items.item}</Link>
+        <li key={item}>
+        <Link to={`/category/${encodeURIComponent(item)}`}>{item}</Link>
         </li>
       ))}
    </ul>
-   {/* <Switch>
-          <Route path={`/category/${item.key}`}>
+   <Switch>
+          <Route path={`/category/`}>
             <Category />
           </Route>
-          <Route path="/">
+          {/* <Route path="/">
             <App />
-          </Route>
-        </Switch> */}
+          </Route> */}
+        </Switch>
   </div>
   </Router>
   );

@@ -1,5 +1,13 @@
 import React, {  useEffect } from 'react';
 import useFetch from "../../services/useFetch";
+import Error from '../Error';
+import Loading from '../Loading';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+  } from "react-router-dom";
 
 
 
@@ -12,10 +20,10 @@ function OfferList() {
       'Content-Type': 'application/json'
   }});
   if (res.error) {
-    return <div>Something gone wrong!</div>
+    return <Error/>;
   }
  if (!res.response) {
-   return <div>Loading...</div>
+   return <Loading/>;
  }
 //  const ourData = res.json();
 console.log(res);

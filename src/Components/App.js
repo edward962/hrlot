@@ -2,6 +2,9 @@ import React, {  useEffect } from 'react';
 import useFetch from "../services/useFetch";
 import './App.css';
 import CategoryList from "./Category/CategoryList";
+import Error from './Error';
+import Loading from './Loading';
+
 
 
 
@@ -15,10 +18,10 @@ function App() {
       'Content-Type': 'application/json'
   }});
   if (res.error) {
-    return <div>Something gone wrong!</div>
+    return <Error/>;
   }
  if (!res.response) {
-   return <div>Loading...</div>
+   return <Loading/>;
  }
 
 //  const ourData = res.json();
