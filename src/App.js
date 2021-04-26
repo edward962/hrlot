@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React, {  useEffect } from 'react';
 import './App.css';
 
+
 function App() {
+  useEffect( () => {
+      console.log(process.env.REACT_APP_API_KEY,process.env.REACT_APP_API_URL);
+      fetch('https://api.lot.com/hr/v3/offers/list/pl', {
+      method: 'get',
+      headers: {
+          'X-Api-Key': 'zEiAS4E5pE3mFnaqIKn3s6kCxsgqHCKH9VB97I0f',
+          'Content-Type': 'application/json'
+      }
+  })
+  .then(response =>  console.log(response.json()))
+  .catch(error => console.error(error));
+
+ }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div>
+    <ul>
+      <li>API: {process.env.API_URL}</li>
+    </ul>
+  </div>
   );
 }
 
