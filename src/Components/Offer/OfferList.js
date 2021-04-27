@@ -2,6 +2,7 @@ import React, {  useEffect } from 'react';
 import useFetch from "../../services/useFetch";
 import Error from '../Error';
 import Loading from '../Loading';
+import Offer from './Offer';
 import {
     BrowserRouter as Router,
     Switch,
@@ -13,23 +14,26 @@ import {
 
 function OfferList() {
  const url = "offers/list/pl";
- const res = useFetch(process.env.REACT_APP_API_URL + url, {
-  method: 'GET',
-  headers: {
-      'X-Api-Key': process.env.REACT_APP_API_KEY,
-      'Content-Type': 'application/json'
-  }});
-  if (res.error) {
+ const mtd = 'GET';
+ const resp = useFetch(url,mtd);
+  if (resp.error) {
     return <Error/>;
   }
- if (!res.response) {
+ if (!resp.response) {
    return <Loading/>;
  }
 //  const ourData = res.json();
-console.log(res);
+const jobs = resp.response.jobs;
+console.log(jobs);
   return (
     <div>
-    {/* <span>{ourData}</span> */}
+   <ul>
+        {jobs.map((it,num) => (
+        <li key={num}>
+        <Offer info={it} />
+        </li>
+      ))}
+   </ul>
   </div>
   );
 }

@@ -2,38 +2,28 @@ import React, {  useEffect } from 'react';
 import useFetch from "../../services/useFetch";
 import Category from "./Category";
 import App from "../App";
-
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
   } from "react-router-dom";
+import Offer from '../Offer/Offer';
 
 
 
 function CategoryList(props) {
    // console.log(props);
   return (
-    <Router>
     <div>
     <ul>
-        {props.items.map(item => (
-        <li key={item}>
-        <Link to={`/category/${encodeURIComponent(item)}`}>{item}</Link>
+        {props.items.map((item,id) => (
+        <li key={id}>
+        {item}
         </li>
       ))}
    </ul>
-   <Switch>
-          <Route path={`/category/`}>
-            <Category />
-          </Route>
-          {/* <Route path="/">
-            <App />
-          </Route> */}
-        </Switch>
   </div>
-  </Router>
   );
 }
 

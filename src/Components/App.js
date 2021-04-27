@@ -2,6 +2,7 @@ import React, {  useEffect } from 'react';
 import useFetch from "../services/useFetch";
 import './App.css';
 import CategoryList from "./Category/CategoryList";
+import OfferList from "./Offer/OfferList";
 import Error from './Error';
 import Loading from './Loading';
 
@@ -11,12 +12,8 @@ import Loading from './Loading';
 
 function App() {
  const url = "categories/pl";
- const res = useFetch(process.env.REACT_APP_API_URL + url, {
-  method: 'GET',
-  headers: {
-      'X-Api-Key': process.env.REACT_APP_API_KEY,
-      'Content-Type': 'application/json'
-  }});
+ const mtd = 'GET';
+ const res = useFetch(url,mtd);
   if (res.error) {
     return <Error/>;
   }
@@ -29,6 +26,7 @@ console.log(res.response);
   return (
     <div>
     <CategoryList items={res.response} />
+    <OfferList />
   </div>
   );
 }
