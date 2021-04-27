@@ -14,12 +14,15 @@ import Offer from '../Offer/Offer';
 
 function CategoryList(props) {
    // console.log(props);
+   const handleClick = () => {
+     console.log("cat click");
+   }
   return (
     <div>
     <ul>
         {props.items.map((item,id) => (
-        <li key={id}>
-        {item}
+        <li onClick={handleClick} key={item}>
+           {item}
         </li>
       ))}
    </ul>

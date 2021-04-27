@@ -28,9 +28,9 @@ console.log(jobs);
   return (
     <div>
    <ul>
-        {jobs.map((it,num) => (
-        <li key={num}>
-        <Offer info={it} />
+        {jobs.map((iter) => (
+        <li key={iter.title}>
+         <Link to={`/offer`}>{iter.title}</Link>
         </li>
       ))}
    </ul>
