@@ -11,7 +11,7 @@ function CategoryList(props) {
     <div>
     <ul>
         {props.items.map((item,id) => (
-        <li role="presentation" class="link"  onClick={() => props.setCategory(item)} key={item}>
+        <li  onClick={() => props.setCategory(item)} key={item}>
           <Link to={`/`} >{item}</Link>
         </li>
       ))}
