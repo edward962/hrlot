@@ -1,5 +1,4 @@
-import React, {  useEffect } from 'react';
-import useFetch from "../../services/useFetch";
+import React from 'react';
 import {Link} from "react-router-dom";
 
 

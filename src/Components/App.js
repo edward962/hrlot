@@ -1,11 +1,10 @@
-import React, {  useEffect, useContext, useState } from 'react';
+import React, { useState } from 'react';
 import useFetch from "../services/useFetch";
 import './App.css';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import CategoryList from "./Category/CategoryList";
 import OfferList from "./Offer/OfferList";
