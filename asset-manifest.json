@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/hrlot/static/css/main.1d40fcba.chunk.css",
-    "main.js": "/hrlot/static/js/main.6586c013.chunk.js",
-    "main.js.map": "/hrlot/static/js/main.6586c013.chunk.js.map",
+    "main.js": "/hrlot/static/js/main.7e25ad74.chunk.js",
+    "main.js.map": "/hrlot/static/js/main.7e25ad74.chunk.js.map",
     "runtime-main.js": "/hrlot/static/js/runtime-main.763c39ed.js",
     "runtime-main.js.map": "/hrlot/static/js/runtime-main.763c39ed.js.map",
     "static/js/2.e4d6e5b5.chunk.js": "/hrlot/static/js/2.e4d6e5b5.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.763c39ed.js",
     "static/js/2.e4d6e5b5.chunk.js",
     "static/css/main.1d40fcba.chunk.css",
-    "static/js/main.6586c013.chunk.js"
+    "static/js/main.7e25ad74.chunk.js"
   ]
 }
