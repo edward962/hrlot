@@ -17,7 +17,7 @@ function OfferList(props) {
    return <Loading/>;
  }
 let jobs;
-if(props.category != ""){
+if(props.category !== ""){
   jobs  = resp.response.jobs.filter(s=>s.category.indexOf(props.category));
   console.log(resp.response.jobs);
 }
@@ -28,7 +28,7 @@ console.log(jobs);
 
   return (
     <div>
-      {(props.category == "")?<h2>Lista wszystkich ofert</h2>:<h2>Lista ofert działu : {props.category}</h2>}
+      {(props.category === "")?<h2>Lista wszystkich ofert</h2>:<h2>Lista ofert działu : {props.category}</h2>}
    <ul>
         {jobs.map((iter) => (
         <li onClick={() => props.setId(Object.values(iter))} key={iter.title}>

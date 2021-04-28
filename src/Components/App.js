@@ -31,11 +31,11 @@ function App() {
 
 
   return (
-   
+    <Router>
     <div>
       <h1>Lista działów:</h1>
     <CategoryList items={res.response} category={category} setCategory={setCategory}/>
-    <Router>
+   
     <Switch>
     <Route path="/offer">
             <Offer id={id}/>
@@ -44,9 +44,9 @@ function App() {
             <OfferList id={id} setId={setId} category={category} setCategory={setCategory}/>
           </Route>
       </Switch>
-    </Router>
+ 
   </div>
-  
+  </Router>
   );
 }
 

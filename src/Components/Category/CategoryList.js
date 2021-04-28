@@ -1,5 +1,6 @@
 import React, {  useEffect } from 'react';
 import useFetch from "../../services/useFetch";
+import {Link} from "react-router-dom";
 
 
 
@@ -12,7 +13,7 @@ function CategoryList(props) {
     <ul>
         {props.items.map((item,id) => (
         <li role="presentation" class="link"  onClick={() => props.setCategory(item)} key={item}>
-          <a href="#">{item}</a> 
+          <Link to={`/`} >{item}</Link>
         </li>
       ))}
    </ul>
