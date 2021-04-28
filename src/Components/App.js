@@ -12,7 +12,6 @@ import Error from './Error';
 import Loading from './Loading';
 import Offer from './Offer/Offer';
 
-
 function App() {
  const [category,setCategory] = useState("");
  const [id,setId] = useState([]);
@@ -25,10 +24,8 @@ function App() {
  if (!res.response) {
    return <Loading/>;
  }
-
-
   return (
-    <Router>
+  <Router>
     <div>
       <h1>Lista działów:</h1>
     <CategoryList items={res.response} category={category} setCategory={setCategory}/>

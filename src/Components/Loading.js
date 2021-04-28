@@ -1,8 +1,5 @@
 import React, {  useEffect } from 'react';
 
-
-
-
 function Loading() {
   return (
     <div>

@@ -4,8 +4,6 @@ import Error from '../Error';
 import Loading from '../Loading';
 import {Link} from "react-router-dom";
 
-
-
 function OfferList(props) {
  const url = "offers/list/pl";
  const mtd = 'GET';
@@ -25,7 +23,6 @@ if(!isEmpty){
 else{
   jobs = resp.response.jobs;
 }
-console.log(jobs);
 
   return (
     <div>
