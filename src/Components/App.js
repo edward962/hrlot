@@ -17,7 +17,8 @@ import Offer from './Offer/Offer';
 export const jobContext = React.createContext();
 
 function App() {
- const [info,setInfo] = useState({category:"", id:0});
+ const [category,setCategory] = useState("");
+ const [id,setId] = useState([]);
  const url = "categories/pl";
  const mtd = 'GET';
  const res = useFetch(url,mtd);
@@ -27,18 +28,19 @@ function App() {
  if (!res.response) {
    return <Loading/>;
  }
-console.log(res.response);
+console.log(category);
+
   return (
    
     <div>
-    <CategoryList items={res.response} />
+    <CategoryList items={res.response} category={category} setCategory={setCategory}/>
     <Router>
     <Switch>
     <Route path="/offer">
-            <Offer />
+            <Offer id={id}/>
           </Route>
           <Route path="/">
-            <OfferList />
+            <OfferList id={id} setId={setId} category={category} setCategory={setCategory}/>
           </Route>
       </Switch>
     </Router>

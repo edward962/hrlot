@@ -2,17 +2,11 @@ import React, {  useEffect } from 'react';
 import useFetch from "../../services/useFetch";
 import Error from '../Error';
 import Loading from '../Loading';
-import Offer from './Offer';
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-  } from "react-router-dom";
+import {Link} from "react-router-dom";
 
 
 
-function OfferList() {
+function OfferList(props) {
  const url = "offers/list/pl";
  const mtd = 'GET';
  const resp = useFetch(url,mtd);
@@ -22,15 +16,14 @@ function OfferList() {
  if (!resp.response) {
    return <Loading/>;
  }
-//  const ourData = res.json();
 const jobs = resp.response.jobs;
 console.log(jobs);
   return (
     <div>
    <ul>
         {jobs.map((iter) => (
-        <li key={iter.title}>
-         <Link to={`/offer`}>{iter.title}</Link>
+        <li onClick={() => props.setId(Object.values(iter))} key={iter.title}>
+         <Link to={`/offer`} >{iter.title}</Link>
         </li>
       ))}
    </ul>

@@ -1,45 +1,20 @@
-import React, {
-  useEffect
-} from 'react';
+import React, {useEffect} from 'react';
 import useFetch from "../../services/useFetch";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  BrowserHistory
-} from "react-router-dom";
 
 
 
 function Offer(props) {
-  // useEffect(() => {
-  //   console.log(props.info.reference);
-  //   fetch("https://api.lot.com/hr/v3/offer/detail/en",
-  //   {method : 'POST',headers: {
-  //     'X-Api-Key': process.env.REACT_APP_API_KEY,
-  //     'Content-Type': 'application/json'
-  // },body:{'ref_id':props.info.reference}}
-  //   )
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         return response.json();
-  //       }
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //     })
-  //     .catch((e) => {
-  //       console.error("Trying to get offer detail!!",e);
-
-  //     })
-  //     .finally(() => {
-
-  //     });
-  // }, []);
-
-  return ( <div>
-    <span > bla </span> 
+  console.log(props);
+  return ( 
+  <div>
+    <p >Tytuł: {props.id[0]} </p>
+    <p >Data: {props.id[1]} </p>
+    <p >Dział: {props.id[2]} </p>
+    <p >Miasto: {props.id[3]} </p>
+    <p >Państwo: {props.id[4]} </p>
+    <p >Województwo: {props.id[5]} </p>
+    <p >Id: {props.id[6]} </p>
+    <a href={props.id[7]}>Aplikuj</a> 
     </div>
   );
 }
