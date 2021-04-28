@@ -14,7 +14,7 @@ function Offer(props) {
     <p >Państwo: {props.id[4]} </p>
     <p >Województwo: {props.id[5]} </p>
     <p >Id: {props.id[6]} </p>
-    <a href={props.id[7]}>Aplikuj</a> 
+    <a href={props.id[7]} target="_blank" >Aplikuj</a> 
     </div>
   );
 }
