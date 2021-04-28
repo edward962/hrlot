@@ -18,7 +18,6 @@ let jobs;
 const isEmpty = (props.category === "");
 if(!isEmpty){
   jobs  = resp.response.jobs.filter(s => s.category.indexOf(props.category));
-  console.log(resp.response.jobs);
 }
 else{
   jobs = resp.response.jobs;
