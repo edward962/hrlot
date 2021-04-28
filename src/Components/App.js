@@ -28,11 +28,12 @@ function App() {
  if (!res.response) {
    return <Loading/>;
  }
-console.log(category);
+
 
   return (
    
     <div>
+      <h1>Lista działów:</h1>
     <CategoryList items={res.response} category={category} setCategory={setCategory}/>
     <Router>
     <Switch>

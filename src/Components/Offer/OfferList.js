@@ -16,10 +16,19 @@ function OfferList(props) {
  if (!resp.response) {
    return <Loading/>;
  }
-const jobs = resp.response.jobs;
+let jobs;
+if(props.category != ""){
+  jobs  = resp.response.jobs.filter(s=>s.category.indexOf(props.category));
+  console.log(resp.response.jobs);
+}
+else{
+  jobs = resp.response.jobs;
+}
 console.log(jobs);
+
   return (
     <div>
+      <h2>Lista ofert</h2>
    <ul>
         {jobs.map((iter) => (
         <li onClick={() => props.setId(Object.values(iter))} key={iter.title}>

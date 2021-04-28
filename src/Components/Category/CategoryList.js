@@ -11,8 +11,8 @@ function CategoryList(props) {
     <div>
     <ul>
         {props.items.map((item,id) => (
-        <li onClick={() => props.setCategory(item)} key={item}>
-          <span>{item}</span> 
+        <li role="presentation" class="link"  onClick={() => props.setCategory(item)} key={item}>
+          <a href="#">{item}</a> 
         </li>
       ))}
    </ul>

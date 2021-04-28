@@ -4,9 +4,9 @@ import useFetch from "../../services/useFetch";
 
 
 function Offer(props) {
-  console.log(props);
   return ( 
   <div>
+    <h3>Oferta</h3>
     <p >Tytuł: {props.id[0]} </p>
     <p >Data: {props.id[1]} </p>
     <p >Dział: {props.id[2]} </p>
