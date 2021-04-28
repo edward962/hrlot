@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/hrlot/static/css/main.1d40fcba.chunk.css",
+    "main.css": "/hrlot/static/css/main.2c87ee28.chunk.css",
     "main.js": "/hrlot/static/js/main.a836791c.chunk.js",
     "main.js.map": "/hrlot/static/js/main.a836791c.chunk.js.map",
     "runtime-main.js": "/hrlot/static/js/runtime-main.763c39ed.js",
@@ -10,13 +10,13 @@
     "static/js/3.654f2d4f.chunk.js": "/hrlot/static/js/3.654f2d4f.chunk.js",
     "static/js/3.654f2d4f.chunk.js.map": "/hrlot/static/js/3.654f2d4f.chunk.js.map",
     "index.html": "/hrlot/index.html",
-    "static/css/main.1d40fcba.chunk.css.map": "/hrlot/static/css/main.1d40fcba.chunk.css.map",
+    "static/css/main.2c87ee28.chunk.css.map": "/hrlot/static/css/main.2c87ee28.chunk.css.map",
     "static/js/2.e4d6e5b5.chunk.js.LICENSE.txt": "/hrlot/static/js/2.e4d6e5b5.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.763c39ed.js",
     "static/js/2.e4d6e5b5.chunk.js",
-    "static/css/main.1d40fcba.chunk.css",
+    "static/css/main.2c87ee28.chunk.css",
     "static/js/main.a836791c.chunk.js"
   ]
 }
