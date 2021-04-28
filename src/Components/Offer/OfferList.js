@@ -19,7 +19,7 @@ function OfferList(props) {
 let jobs;
 const isEmpty = (props.category === "");
 if(!isEmpty){
-  jobs  = resp.response.jobs.filter(s=>s.category.indexOf(props.category));
+  jobs  = resp.response.jobs.filter(s => s.category.indexOf(props.category));
   console.log(resp.response.jobs);
 }
 else{

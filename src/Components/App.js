@@ -13,8 +13,6 @@ import Loading from './Loading';
 import Offer from './Offer/Offer';
 
 
-export const jobContext = React.createContext();
-
 function App() {
  const [category,setCategory] = useState("");
  const [id,setId] = useState([]);
